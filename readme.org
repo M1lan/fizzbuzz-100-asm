@@ -5,7 +5,7 @@ problem for numbers up to 100.  The unique aspect of this solution is its
 O(1) complexity acheived by pre-computing the entire output and storing
 it in the data section.
 
-**Code Overview**
+* Code Overview
 
 The code is divided into two sections:
 
@@ -17,7 +17,7 @@ The code is divided into two sections:
 - *\.text:* This section contains the program's execution logic. It
   utilizes system calls to print the data to the console and then exit.
 
-**Building and Running**
+* Building and Running
 
 To assemble and run the code, you can use the following commands:
 
@@ -27,7 +27,7 @@ To assemble and run the code, you can use the following commands:
   ./fizzbuzz-100
 #+END_SRC
 
-**Approach and Complexity**
+* Approach and Complexity
 
 The approach taken here prioritizes executoin speed by pre-calculating
 the entire output.  This results in a constant time complexity, O(1), as
@@ -37,7 +37,7 @@ size (which is fixed at 100 in this case).
 While this approach is highly efficient in terms of execution speed, it
 comes at the cost of increased memory usage and reduced flexibility.
 
-**Potential Improvements**
+* Potential Improvements
 
 - *Dynamic Input:* The current implementation is limited to numbers up
   to 100. A more flexible solution could calculate the FizzBuzz output
