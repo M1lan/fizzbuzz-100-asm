@@ -1,0 +1,52 @@
+#+TITLE: FizzBuzz in x86 Assembly
+
+This project presents an x86 assembly solution to the classic FizzBuzz
+problem for numbers up to 100.  The unique aspect of this solution is its
+O(1) complexity acheived by pre-computing the entire output and storing
+it in the data section.
+
+**Code Overview**
+
+The code is divided into two sections:
+
+- *\.data:* This section stores the pre-computed FizzBuzz output for
+  numbers 1 to 100 as a sequence of ASCII characters. Each number/word
+  ("1", "2", "Fizz", "4", "Buzz", etc.) is followed by a space
+  (ASCII 32) and each line ends with a newline character (ASCII 10).
+
+- *\.text:* This section contains the program's execution logic. It
+  utilizes system calls to print the data to the console and then exit.
+
+**Building and Running**
+
+To assemble and run the code, you can use the following commands:
+
+#+BEGIN_SRC bash
+  nasm -f elf32 fizzbuzz-100.asm -o fizzbuzz-100.o
+  ld -m elf_i386 -o fizzbuzz-100 fizzbuzz-100.o
+  ./fizzbuzz-100
+#+END_SRC
+
+**Approach and Complexity**
+
+The approach taken here prioritizes executoin speed by pre-calculating
+the entire output.  This results in a constant time complexity, O(1), as
+the program simply prints the pre-computed data regardless of the input
+size (which is fixed at 100 in this case).
+
+While this approach is highly efficient in terms of execution speed, it
+comes at the cost of increased memory usage and reduced flexibility.
+
+**Potential Improvements**
+
+- *Dynamic Input:* The current implementation is limited to numbers up
+  to 100. A more flexible solution could calculate the FizzBuzz output
+  dynamically based on user input.
+- *Code Size:* The data section could potentially be compressed to
+  reduce the overall code size.
+
+
+#+BEGIN_QUOTE
+Feel free to explore and modify the code to experiment with different
+approaches and optimizations.
+#+END_QUOTE
