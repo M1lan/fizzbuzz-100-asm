@@ -1,52 +1,56 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
 *.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
+*.app
+*.bc
+*.cmd
+*.d
+*.dSYM/
 *.dll
+*.dll
+*.dylib
+*.dylib
+*.elf
+*.exe
+*.exe
+*.exe
+*.exe~
+*.exp
+*.ez
+*.gch
+*.hex
+*.i*86
+*.idb
+*.ilk
+*.ko
+*.la
+*.lib
+*.lo
+*.map
+*.mod*
+*.o
+*.o
+*.obj
+*.obj
+*.out
+*.out
+*.pch
+*.pdb
+*.so
 *.so
 *.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
 *.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
+*.test
+*.x86_64
+*~
 .tmp_versions/
-modules.order
-Module.symvers
+/.fetch
+/_build/
+/cover/
+/deps/
+/doc/
 Mkfile.old
+Module.symvers
+asm-*.tar
 dkms.conf
+erl_crash.dump
+include/
+modules.order
